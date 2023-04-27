@@ -6,5 +6,6 @@
 
 [overall site aspect](https://excalidraw.com/#room=3e9aa9f1fda2eba01b57,Oje23h2vRnRlo1vp3FFNDg)
 
-ssh adehu@prjwww.univ-pau.fr
+`ssh adehu@prjwww.univ-pau.fr`
+
 http://prjwww.univ-pau.fr/~adehu
