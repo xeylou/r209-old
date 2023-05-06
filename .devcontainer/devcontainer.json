@@ -10,7 +10,8 @@
 			"extensions": [
 				"ms-vscode.live-server",
 				"tomoki1207.pdf",
-				"marlosirapuan.nord-deep"
+				"marlosirapuan.nord-deep",
+				"HookyQR.beautify"
 			]
 		}
 	}
