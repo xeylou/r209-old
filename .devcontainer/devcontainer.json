@@ -1,4 +1,5 @@
 {
+	"name": "website2",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/neofetch:1": {},
