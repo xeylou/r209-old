@@ -3,5 +3,14 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/neofetch:1": {},
 		"ghcr.io/swift-server-community/swift-devcontainer-features/sqlite:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.live-server",
+				"tomoki1207.pdf",
+				"marlosirapuan.nord-deep"
+			]
+		}
 	}
 }
