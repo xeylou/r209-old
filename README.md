@@ -9,3 +9,5 @@
 `ssh adehu@prjwww.univ-pau.fr`
 
 http://prjwww.univ-pau.fr/~adehu
+
+https://dbdiagram.io/d/64561898dca9fb07c49c028e
