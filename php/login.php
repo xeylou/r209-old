@@ -22,7 +22,7 @@
                             class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <h1 class="" style="margin:0;">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.php">
                             Manila Manga
                         </a>
                     </h1>
@@ -31,17 +31,17 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav  navbar-right">
                         <li>
-                            <a href="index.html" title="Home">
+                            <a href="index.php" title="Home">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="categories.html" title="Categories">
+                            <a href="categories.php" title="Categories">
                                 Categories
                             </a>
                         </li>
                         <li>
-                            <a href="catalogue.html" title="Mangas">
+                            <a href="catalogue.php" title="Mangas">
                                 Catalogue
                             </a>
                         </li>
@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div>
-                                    <p>If you are a new user on this website, please consider <a href="register.html">Sign up</a>.</p>
+                                    <p>If you are a new user on this website, please consider <a href="register.php">Sign up</a>.</p>
                                     <div class="fcf-body">
                                         <div id="fcf-form">
                                             <h3>Sign in</h3>
@@ -109,17 +109,17 @@
     
                             <ul class=" pull-right ">
                                 <li>
-                                    <a href="index.html" title="Home">
+                                    <a href="index.php" title="Home">
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalogue.html" title="Mangas">
+                                    <a href="catalogue.php" title="Mangas">
                                         Catalogue
                                     </a>
                                 </li>
                             </ul>
-                            <a href="index.html">Manila Manga</a>
+                            <a href="index.php">Manila Manga</a>
                         </div>
                     </div>
                 </div>

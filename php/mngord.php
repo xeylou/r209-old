@@ -22,7 +22,7 @@
                             class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <h1 class="" style="margin:0;">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.php">
                             Manila Manga
                         </a>
                     </h1>
@@ -31,17 +31,17 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav  navbar-right">
                         <li>
-                            <a href="index.html" title="Home">
+                            <a href="index.php" title="Home">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="categories.html" title="Categories">
+                            <a href="categories.php" title="Categories">
                                 Categories
                             </a>
                         </li>
                         <li>
-                            <a href="catalogue.html" title="Catalogue Mangas">
+                            <a href="catalogue.php" title="Catalogue Mangas">
                                 Catalogue
                             </a>
                         </li>
@@ -60,20 +60,17 @@
 
         <div class="admp">
         <p>
-        <a href="mngart.html" title="Add articles.">
+        <a href="mngart.php" title="Add articles.">
                 Manage articles.
                 </a>
-                <dd>a</dd>
-                <dt>b</dt>
-                <strong>c</strong>
             </p>
         <p> 
-        <a href="mngctg.html" title="Add articles.">
+        <a href="mngctg.php" title="Add articles.">
                 Manage categories.
                 </a>
             </p>
         <p>
-        <a href="mngod.html" title="Add articles.">
+        <a href="mngord.php" title="Add articles.">
                 Manage orders.
                 </a>
             </p>
@@ -111,18 +108,18 @@
     
                             <ul class=" pull-right ">
                                 <li>
-                                    <a href="index.html" title="Home">
+                                    <a href="index.php" title="Home">
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalogue.html" title="Mangas">
+                                    <a href="catalogue.php" title="Mangas">
                                         Catalogue
                                     </a>
                                 </li>
                             </ul>
                             <!-- &copy;&nbsp;2023&nbsp; -->
-                            <a href="index.html">Manila Manga</a>
+                            <a href="index.php">Manila Manga</a>
                             <!-- &nbsp; -->
                         </div>
                     </div>
