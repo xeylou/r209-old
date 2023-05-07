@@ -16,6 +16,15 @@
 </head>
 
 <body class=" layout-boxed ">
+    <?php
+    $db = new SQLite3('r209-db-01.sqlite');
+    $results = $db->query('SELECT * FROM mangas');
+    // echo $results;
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        $id = $_GET['id'];
+        echo $id;
+        }
+    ?>
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
             <div class=" container ">

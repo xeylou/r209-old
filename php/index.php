@@ -104,11 +104,11 @@
                             <li class="span3">
                                 <div class="photo" style="position: relative;">
                                     <div class="manga-name">
-                                        <a class="label label-warning" href="individual.php">Chainsaw Man</a>
+                                        <a class="label label-warning" href="individual.php?id=1">Chainsaw Man</a>
                                     </div>
                                     <a class="thumbnail"
                                         style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="individual.php">
+                                        href="individual.php?id=1">
                                         <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970556052787210/csm_01.png"
                                             alt="Chainsaw Man">
                                     </a>
