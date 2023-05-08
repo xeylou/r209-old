@@ -17,8 +17,8 @@
 
 <body class=" layout-boxed ">
     <?php
-    $db = new SQLite3('r209-db-01.sqlite');
-    $results = $db->query('SELECT * FROM mangas');
+    $db = new SQLite3('/var/www/html/db/r209-db-01.sqlite');
+    // $results = $db->query('SELECT * FROM mangas');
     // echo $results;
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $id = $_GET['id'];
