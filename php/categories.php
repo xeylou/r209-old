@@ -74,12 +74,13 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-sm-8 col-sm-pull-4">
                     <div class="col-sm-12">
-                        <h2 class="hotmanga-header"><i class=""></i>💀  Seinen</h2>
+                        <h2 class="hotmanga-header"><i class=""></i>Seinen</h2>
                         <hr />
                         <ul class="hot-thumbnails">
-
+                            
                             <li class="span3">
                                 <div class="photo" style="position: relative;">
                                     <div class="manga-name">
@@ -137,7 +138,7 @@
                 </div>
                 <div class="col-sm-8 col-sm-pull-4">
                     <div class="col-sm-12">
-                        <h2 class="hotmanga-header"><i class=""></i>👋  Shōnen</h2>
+                        <h2 class="hotmanga-header"><i class=""></i>Shōnen</h2>
                         <hr>
                         <ul class="hot-thumbnails">
                             <li class="span3">
