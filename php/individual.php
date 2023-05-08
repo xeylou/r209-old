@@ -17,13 +17,23 @@
 
 <body class=" layout-boxed ">
     <?php
-    $db = new SQLite3('/var/www/html/db/r209-db-01.sqlite');
-    // $results = $db->query('SELECT * FROM mangas');
-    // echo $results;
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $id = $_GET['id'];
-        echo $id;
-        }
+    $db = new SQLite3('r209-db-01.sqlite');
+
+    $id = $_GET['id'];
+    $req1 = 'SELECT * FROM mangas WHERE mangaId="'.$id.'"';
+    $results1 = $db->query($req1);
+    $data1=$results1->fetchArray();
+
+    $ctg_name='SELECT cateoryName FROM categories WHERE categoryId IN (SELECT categoryId FROM mangas WHERE mangaId = "'.$id.'")';
+    $results2=$db->query($ctg_name);
+    $data2=$results2->fetchArray();
+
+    $old_views_number=$data1[7];
+    $current_views_number=$old_views_number+1;
+    echo $current_views_number;
+    $req3='UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"';
+    // $results3=$db->querry($req3);
+    // echo $data[7];
     ?>
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
@@ -71,41 +81,41 @@
             <div class=" container ">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 class="widget-title" style="display: inline-block;">Chainsaw Man</h2>
+                        <h2 class="widget-title" style="display: inline-block;"><?php echo $data1[2];?></h2>
                         <hr>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="boxed" style="width: 250px; height: 350px;">
                                     <img class="img-responsive" style="height:auto"
-                                            src="https://cdn.discordapp.com/attachments/766013915536556056/1103970556052787210/csm_01.png"
-                                        alt="Chainsaw Man">
+                                            src="<?php echo $data1[1];?>"
+                                        alt="<?php echo $display_name;?>">
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <dl class="dl-horizontal">
                                     <dt>Name</dt>
-                                    <dd>Chainsaw Man</dd> 
+                                    <dd><?php echo $data1[2];?></dd> 
                                     <dt>Author</dt>
-                                    <dd>Fujimoto Tatsuki</dd>
+                                    <dd><?php echo $data1[3];?></dd>
                                     <dt>Volume</dt>
-                                    <dd>01</dd>
+                                    <dd><?php echo $data1[4];?></dd>
                                     <dt>Release date</dt>
-                                    <dd>2020/08/06</dd>
+                                    <dd><?php echo $data1[5];?></dd>
                                     <dt>Category</dt>
-                                    <dd>Shōnen</dd>
+                                    <dd><?php echo $data2[0];?></dd>
                                     <dt>Vues</dt>
-                                    <dd>0</dd>
+                                    <dd><?php echo $data1[7];?></dd>
                                     <br>
                                     <dt>Quantity left</dt>
-                                    <dd>1</dd>
-                                    <dt>Price</dt>
-                                    <dd>6.5</dd>
+                                    <dd><?php echo $data1[8];?></dd>
+                                    <dt>Price (USD)</dt>
+                                    <dd>$<?php echo $data1[9];?>0</dd>
                                 </dl>           
                             </div>
                             <dt>Description</dt>
                             <p>
                             <dl style="margin-right: 80px;">
-                                Denji is a loser who will do literally anything for money, due to inheriting an enormous debt to some local Yakuza Loan Sharks after his father seemingly committed suicide when he was a child. This includes hunting Devils, dangerous Anthropomorphic Personifications of human fears that randomly appear in the world on a regular basis. Having no friends other than his pet Devil Pochita, a dog-like creature that is also a chainsaw, and having sold several of his own organs now to survive.
+                            <?php echo $data1[10];?>
                             </dl>
                         </div>
                     </div>
