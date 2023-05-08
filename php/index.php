@@ -101,62 +101,37 @@
                         <h2 class="hotmanga-header"><i class=""></i>🔔 Newest Mangas</h2>
                         <hr />
                         <ul class="hot-thumbnails">
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning" href="individual.php?id=1">Chainsaw Man</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="individual.php?id=1">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970556052787210/csm_01.png"
-                                            alt="Chainsaw Man">
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                            <?php
+                            $db = new SQLite3('r209-db-01.sqlite');
 
-                            <li class="span3">
+                            $req = 'SELECT * FROM mangas ORDER BY releaseDate DESC LIMIT 3';
+                            $results = $db->query($req);
+                            $req2='SELECT * FROM mangas ORDER BY viewsNumber DESC LIMIT 6';
+                            $results2=$db->query($req2);
+                            
+    
+                            while ($data=$results->fetchArray()) {
+                                echo '<li class="span3">
                                 <div class="photo" style="position: relative;">
                                     <div class="manga-name">
-                                        <a class="label label-warning" href="">Vinland Saga</a>
+                                        <a class="label label-warning"
+                                            href="individual.php?id='.$data[0].'">'.$data[2].'</a>
                                     </div>
                                     <a class="thumbnail"
                                         style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href=''>
-                                        <img src='https://cdn.discordapp.com/attachments/766013915536556056/1103970557571117118/vs_01.jpg'
-                                            alt='Vinland Saga' />
+                                        href="individual.php?id='.$data[0].'">
+                                        <img src="'.$data[1].'?>"
+                                            alt="'.$data[2].'">
                                     </a>
                                     <div class="well">
                                         <p>
-                                            # 01
+                                            # 0'.$data[0].'
                                         </p>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning" href="">Jujutsu Kaisen</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970556644175912/jjk_01.png"
-                                            alt="Jujutsu Kaisen">
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                            </li>';
+                            };
+                        ?>
                     </div>
                 </div>
             </div>
@@ -177,126 +152,29 @@
                         <h2 class="hotmanga-header"><i class=""></i>⭐ Most Viewed</h2>
                         <hr>
                         <ul class="hot-thumbnails">
-                            <li class="span3">
+                            <?php
+                            while ($data2=$results2->fetchArray()) {
+                                echo '<li class="span3">
                                 <div class="photo" style="position: relative;">
                                     <div class="manga-name">
                                         <a class="label label-warning"
-                                            href="">Chainsaw Man</a>
+                                            href="individual.php?id='.$data2[0].'">'.$data2[2].'</a>
                                     </div>
                                     <a class="thumbnail"
                                         style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970556052787210/csm_01.png"
-                                            alt="Chainsaw Man">
+                                        href="individual.php?id='.$data2[0].'">
+                                        <img src="'.$data2[1].'?>"
+                                            alt="'.$data2[2].'">
                                     </a>
                                     <div class="well">
                                         <p>
-                                            # 01
+                                            # 0'.$data2[0].'
                                         </p>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning"
-                                            href="">Vinland Saga</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970557571117118/vs_01.jpg"
-                                            alt="Vinland Saga">
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            <i class=""></i>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning"
-                                            href="">Tokyo Revengers</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href=''>
-                                        <img src='https://cdn.discordapp.com/attachments/766013915536556056/1103970557336244245/tr_01.jpg'
-                                            alt='Tokyo Revengers' />
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning"
-                                            href="">Jujutsu Kaisen</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970556644175912/jjk_01.png"
-                                            alt="Jujutsu Kaisen">
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning"
-                                            href="">Blue Lock</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1104367144415789197/bl-01.jpg"
-                                            alt="Blue Lock">
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="span3">
-                                <div class="photo" style="position: relative;">
-                                    <div class="manga-name">
-                                        <a class="label label-warning"
-                                            href="">Berserk</a>
-                                    </div>
-                                    <a class="thumbnail"
-                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
-                                        href="">
-                                        <img src="https://cdn.discordapp.com/attachments/766013915536556056/1103970555356516383/berserk_01.jpg"
-                                            alt="Berserk">
-                                    </a>
-                                    <div class="well">
-                                        <p>
-                                            # 01
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                            </li>';
+                            };
+                            ?>
                             
                         </ul>
                     </div>
