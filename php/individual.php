@@ -20,7 +20,7 @@
     $db = new SQLite3('r209-db-01.sqlite');
 
     $id = $_GET['id'];
-    $req1 = 'SELECT * FROM mangas WHERE mangaId="'.$id.'"';
+    $req1 = 'SELECT * FROM mangas WHERE mangaId="'.$id.'"';  // statement
     $results1 = $db->query($req1);
     $data1=$results1->fetchArray();
 
@@ -81,41 +81,41 @@
             <div class=" container ">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 class="widget-title" style="display: inline-block;"><?php echo $data1[2];?></h2>
+                        <h2 class="widget-title" style="display: inline-block;"><?php echo $data1['displayName'];?></h2>
                         <hr>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="boxed" style="width: 250px; height: 350px;">
                                     <img class="img-responsive" style="height:auto"
-                                            src="<?php echo $data1[1];?>"
+                                            src="<?php echo $data1['imageLink'];?>"
                                         alt="<?php echo $display_name;?>">
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <dl class="dl-horizontal">
                                     <dt>Name</dt>
-                                    <dd><?php echo $data1[2];?></dd> 
+                                    <dd><?php echo $data1['displayName'];?></dd> 
                                     <dt>Author</dt>
-                                    <dd><?php echo $data1[3];?></dd>
+                                    <dd><?php echo $data1['authorName'];?></dd>
                                     <dt>Volume</dt>
-                                    <dd><?php echo $data1[4];?></dd>
+                                    <dd><?php echo $data1['volumeNumber'];?></dd>
                                     <dt>Release date</dt>
-                                    <dd><?php echo $data1[5];?></dd>
+                                    <dd><?php echo $data1['releaseDate'];?></dd>
                                     <dt>Category</dt>
                                     <dd><?php echo $data2[0];?></dd>
                                     <dt>Vues</dt>
-                                    <dd><?php echo $data1[7];?></dd>
+                                    <dd><?php echo $data1['viewsNumber'];?></dd>
                                     <br>
                                     <dt>Quantity left</dt>
-                                    <dd><?php echo $data1[8];?></dd>
+                                    <dd><?php echo $data1['stockLeft'];?></dd>
                                     <dt>Price (USD)</dt>
-                                    <dd>$<?php echo $data1[9];?>0</dd>
+                                    <dd>$<?php echo $data1['price'];?>0</dd>
                                 </dl>           
                             </div>
                             <dt>Description</dt>
                             <p>
                             <dl style="margin-right: 80px;">
-                            <?php echo $data1[10];?>
+                            <?php echo $data1['description'];?>
                             </dl>
                         </div>
                     </div>

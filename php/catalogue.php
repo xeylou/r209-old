@@ -92,6 +92,35 @@
                         <h2 class="hotmanga-header"><i class=""></i>📰  Catalogue</h2>
                         <hr>
                         <ul class="hot-thumbnails">
+                        <?php
+                        $db = new SQLite3('r209-db-01.sqlite');
+
+                        $req = 'SELECT * FROM mangas';  // statement
+                        $results = $db->query($req);
+                        
+
+                        while ($data=$results->fetchArray()) {
+                            echo '<li class="span3">
+                            <div class="photo" style="position: relative;">
+                                <div class="manga-name">
+                                    <a class="label label-warning"
+                                        href=""><?phpecho .$data[2]. ?></a>
+                                </div>
+                                <a class="thumbnail"
+                                    style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                    href="">
+                                    <img src="<?phpecho $data[1]?>"
+                                        alt="<?phpecho $data[2]?>">
+                                </a>
+                                <div class="well">
+                                    <p>
+                                        # <?phpecho $data[0]?>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>';
+                        };
+                    ?>
                             <li class="span3">
                                 <div class="photo" style="position: relative;">
                                     <div class="manga-name">
