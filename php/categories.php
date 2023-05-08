@@ -126,7 +126,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 col-sm-push-8">
-                    <div class="row" id="sidebar">
+                    <div class="row">
                         <div class="col-xs-12" style="padding: 0">
                             <div style="display: table; margin: 10px auto;">
                                 <div id="protag-sidebar"></div>

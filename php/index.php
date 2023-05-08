@@ -89,7 +89,15 @@
 
                     <div class="panel panel-success">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><strong>Tome #01 of Chainsaw Man now available!</strong></h3>
+                            <?php
+                            $db = new SQLite3('r209-db-01.sqlite');
+                            $req0 = 'SELECT * from announce';
+                            $results0 = $db->query($req0);
+                            while ($data0=$results0->fetchArray()) {
+                                echo '<h3 class="panel-title"><strong>'.$data0['text'].'</strong></h3>';                               
+                            }
+                            
+                            ?>
                         </div>
                         <div id="waiting" style="display: none;text-align: center;">
                         </div>
@@ -99,10 +107,9 @@
                 <div class="col-sm-8 col-sm-pull-4">
                     <div class="col-sm-12">
                         <h2 class="hotmanga-header"><i class=""></i>🔔 Newest Mangas</h2>
-                        <hr />
+                        <hr>
                         <ul class="hot-thumbnails">
                             <?php
-                            $db = new SQLite3('r209-db-01.sqlite');
 
                             $req = 'SELECT * FROM mangas ORDER BY releaseDate DESC LIMIT 3';
                             $results = $db->query($req);

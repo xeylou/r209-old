@@ -31,9 +31,8 @@
     $old_views_number=$data1[7];
     $current_views_number=$old_views_number+1;
     echo $current_views_number;
-    $req3='UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"';
-    // $results3=$db->querry($req3);
-    // echo $data[7];
+    // $req3='UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"';
+    // $data3->query("UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"");
     ?>
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
@@ -117,6 +116,7 @@
                             <dl style="margin-right: 80px;">
                             <?php echo $data1['description'];?>
                             </dl>
+                            
                         </div>
                     </div>
                 </div>
