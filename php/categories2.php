@@ -14,22 +14,17 @@
 </head>
 
 <body class=" layout-boxed ">
-
-
 <?php
     $db = new SQLite3('r209-db-01.sqlite');
 
-    // $id = $_GET['id'];
-    // $req1 = 'SELECT * FROM mangas WHERE categoryId="'.$id.'"';
-    // $results1 = $db->query($req1);
+    $id = $_GET['id'];
+    $req1 = 'SELECT * FROM mangas WHERE categoryId="'.$id.'"';
+    $results1 = $db->query($req1);
 
-    
-    $ctg_names='SELECT * FROM categories WHERE categoryId = "'.$id.'"';
+    $ctg_name='SELECT cateoryName FROM categories WHERE categoryId = "'.$id.'"';
     $results2 = $db->query($ctg_name);
     $data2=$results2->fetchArray();
     ?>
-
-
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
             <div class=" container ">
