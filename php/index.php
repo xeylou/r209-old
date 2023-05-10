@@ -132,7 +132,7 @@
                                     </a>
                                     <div class="well">
                                         <p>
-                                            # 0'.$data[0].'
+                                            # '.$data[4].'
                                         </p>
                                     </div>
                                 </div>

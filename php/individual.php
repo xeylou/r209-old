@@ -101,7 +101,7 @@
                                     <dt>Release date</dt>
                                     <dd><?php echo $data1['releaseDate'];?></dd>
                                     <dt>Category</dt>
-                                    <dd><a href="<?php echo 'categories2.php?id='.$data1['categoryId'].'';?>"><?php echo $data2[0];?></a>
+                                    <dd><a href="<?php echo 'categories.php?id='.$data1['categoryId'].'';?>"><?php echo $data2[0];?></a>
                                     </dd>
                                     <dt>Vues</dt>
                                     <dd><?php echo $data1['viewsNumber'];?></dd>

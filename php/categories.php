@@ -17,15 +17,15 @@
 
 
 <?php
-    $db = new SQLite3('r209-db-01.sqlite');
+    $db=new SQLite3('r209-db-01.sqlite');
 
-    // $id = $_GET['id'];
-    // $req1 = 'SELECT * FROM mangas WHERE categoryId="'.$id.'"';
-    // $results1 = $db->query($req1);
+    $id=$_GET['id'];
+    $req1='SELECT * FROM mangas WHERE categoryId="'.$id.'"';
+    $results1=$db->query($req1);
 
     
     $ctg_names='SELECT * FROM categories WHERE categoryId = "'.$id.'"';
-    $results2 = $db->query($ctg_name);
+    $results2=$db->query($ctg_names);
     $data2=$results2->fetchArray();
     ?>
 
@@ -93,7 +93,7 @@
                 
                 <div class="col-sm-8 col-sm-pull-4">
                     <div class="col-sm-12">
-                        <h2 class="hotmanga-header"><i class=""></i><?php echo $data2[0]?></h2>
+                        <h2 class="hotmanga-header"><i class=""></i><?php echo $data2[1]?></h2>
                         <hr>
                         <ul class="hot-thumbnails">
                             <?php
@@ -112,7 +112,7 @@
                                     </a>
                                     <div class="well">
                                         <p>
-                                            # 0'.$data1[0].'
+                                            # '.$data1[4].'
                                         </p>
                                     </div>
                                 </div>
