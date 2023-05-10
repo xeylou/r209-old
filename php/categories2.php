@@ -14,13 +14,6 @@
 </head>
 
 <body class=" layout-boxed ">
-<?php
-    $db=new SQLite3('r209-db-01.sqlite');
-
-    $req1='SELECT * FROM categories';
-    $res1=$db->query($req1);
-
-    ?>
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
             <div class=" container ">
@@ -83,16 +76,46 @@
                 </div>
                 
                 <?php
+                $db=new SQLite3('r209-db-01.sqlite');
+            
+                $req1='SELECT * FROM categories';
+                $res1=$db->query($req1);
+            
                 while ($data1=$res1->fetchArray()) {
+                    $tmp_req='SELECT * FROM mangas WHERE categoryId = '.$data1[0].'';
+                    $tmp_res=$db->query($tmp_req);
+
+
                     echo '<div class="col-sm-8 col-sm-pull-4">
                     <div class="col-sm-12">
                         <h2 class="hotmanga-header"><i class=""></i>'.$data1[1].'</h2>
                         <hr>
-                        <ul class="hot-thumbnails">
+                        <ul class="hot-thumbnails">';  // starting of a category
 
-                        <!-- here the mangas -->
 
-                    </div>
+                    while ($tmp_data=$tmp_res->fetchArray()) {
+                        echo '<li class="span3">
+                        <div class="photo" style="position: relative;">
+                            <div class="manga-name">
+                                <a class="label label-warning"
+                                    href="individual.php?id='.$tmp_res[0].'">'.$tmp_res[2].'</a>
+                            </div>
+                            <a class="thumbnail"
+                                style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                href="individual.php?id='.$tmp_res[0].'">
+                                <img src="'.$tmp_res[1].'?>"
+                                    alt="'.$tmp_res[2].'">
+                            </a>
+                            <div class="well">
+                                <p>
+                                    # '.$tmp_res[4].'
+                                </p>
+                            </div>
+                        </div>
+                    </li>';  // here the mangas
+                    }
+
+                    echo '</div>
                 </div>
                 </div>
                 <div class="row">
@@ -106,7 +129,7 @@
                             </div>
                         </div>
                     </div>
-                </div>';
+                </div>'; // the ending of the category
                 }
                 ?>  
             </div>
