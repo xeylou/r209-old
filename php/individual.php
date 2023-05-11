@@ -30,8 +30,10 @@
 
     $old_views_number=$data1[7];
     $current_views_number=$old_views_number+1;
-    echo $current_views_number;
-    // $req3='UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"';
+
+
+    $sth = $db->prepare('UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"');
+    $sth->execute();
     // $data3->query("UPDATE mangas SET viewsNumber = "'.$current_views_number.'" WHERE mangaId = "'.$id.'"");
     ?>
     <div class="wrapper">
@@ -101,7 +103,7 @@
                                     <dt>Release date</dt>
                                     <dd><?php echo $data1['releaseDate'];?></dd>
                                     <dt>Category</dt>
-                                    <dd><a href="<?php echo 'categories.php?id='.$data1['categoryId'].'';?>"><?php echo $data2[0];?></a>
+                                    <dd><a href="<?php echo 'category.php?id='.$data1['categoryId'].'';?>"><?php echo $data2[0];?></a>
                                     </dd>
                                     <dt>Vues</dt>
                                     <dd><?php echo $data1['viewsNumber'];?></dd>
