@@ -102,11 +102,7 @@
                     // /!\ COMMENT JE PEUX FAIRE POUR AVOIR UNE VARIABLE QUI PREND SUCCESSIVEMENT CHAQUE ID DES MANGAS QUI CONSTISTUE UNE CATEGORIE
 
                     // catching each mangas info one by one 
-                    $quer3='SELECT * FROM mangas WHERE categoryId = '.$data2[0].'';
-                    $res3=$db->query($quer3);
-                    $data3=$res3->fetchArray();
-
-                    echo $data3[2];
+                    echo $data1[0];
 
                     // echo $data3[2];
                     // put the number of mangas by categories in first value
