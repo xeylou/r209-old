@@ -101,7 +101,7 @@
 
                     // /!\ COMMENT JE PEUX FAIRE POUR AVOIR UNE VARIABLE QUI PREND SUCCESSIVEMENT CHAQUE ID DES MANGAS QUI CONSTISTUE UNE CATEGORIE
 
-                    // catching each mangas info one by one 
+                    // SELECT ALL MANGAS FROM BELOW
                     echo $data1[0];
 
                     // echo $data3[2];
