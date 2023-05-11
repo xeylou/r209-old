@@ -117,6 +117,9 @@
                             <dl style="margin-right: 80px;">
                             <?php echo $data1['description'];?>
                             </dl>
+                            <div style='margin-left: 320px'><button
+                                >Add to cart
+                            </button></div>
                             
                         </div>
                     </div>

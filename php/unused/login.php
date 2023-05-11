@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div>
-                                    <p>If you are a new user on this website, please consider <a href="register.php">Sign up</a>.</p>
+                                    <p>If you are a new user on this website, please consider <a href="register.php">signing up</a>.</p>
                                     <div class="fcf-body">
                                         <div id="fcf-form">
                                             <h3>Sign in</h3>
@@ -90,7 +90,7 @@
                                                 </p>
                                                 <div class="fcf-form-group">
                                                     <button type="submit" id="fcf-button"
-                                                        class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Register
+                                                        class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Login
                                                         </button>
                                                 </div>
                                             </form>
