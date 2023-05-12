@@ -79,7 +79,6 @@
             </div>
         </nav>
         <div class=" container ">
-            <div class=" container ">
                 <div class="row">
                     <div class="col-sm-12">
                         <h2 class="widget-title" style="display: inline-block;"><?php echo $data1['displayName'];?></h2>
@@ -126,8 +125,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+                <div class="row">
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="manga-footer">
@@ -149,6 +147,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+            
         </div>
     </div>       
 </body>

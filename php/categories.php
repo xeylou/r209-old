@@ -59,12 +59,12 @@
         </nav>
 
         <div class=" container ">
-
             <div class="row">
                 <div class="col-sm-12">
+                <!-- <h2 class="widget-title" style="display: inline-block;">Categories</h2>
+                        <hr> -->
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-sm-4 col-sm-push-8">
@@ -73,7 +73,8 @@
                         <div class="col-xs-12" style="padding: 0">
                         </div>
                     </div>
-                </div>
+                    
+                </div>  
                 
 
                 <?php
@@ -101,8 +102,31 @@
 
                     // /!\ COMMENT JE PEUX FAIRE POUR AVOIR UNE VARIABLE QUI PREND SUCCESSIVEMENT CHAQUE ID DES MANGAS QUI CONSTISTUE UNE CATEGORIE
 
-                    // SELECT ALL MANGAS FROM BELOW
-                    echo $data1[0];
+
+                    $quer3='SELECT * FROM mangas WHERE categoryId = '.$data1[0].'';
+                    $res3=$db->query($quer3);
+
+                    while ($data3=$res3->fetchArray()) {
+                        echo '<li class="span3">
+                                <div class="photo" style="position: relative;">
+                                    <div class="manga-name">
+                                        <a class="label label-warning"
+                                            href="individual.php?id='.$data3[0].'">'.$data3[2].'</a>
+                                    </div>
+                                    <a class="thumbnail"
+                                        style="position: relative; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                        href="individual.php?id='.$data3[0].'">
+                                        <img src="'.$data3[1].'?>"
+                                            alt="'.$data3[2].'">
+                                    </a>
+                                    <div class="well">
+                                        <p>
+                                            # '.$data3[4].'
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>';
+                    }
 
                     // echo $data3[2];
                     // put the number of mangas by categories in first value
@@ -141,6 +165,7 @@
                 }
                 ?>  
             </div>
+            <!-- pas touche -->
             <div class="row">
                 <div class="col-sm-12">
                     <div class="row">
@@ -163,6 +188,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
 </body>
