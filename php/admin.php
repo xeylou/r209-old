@@ -1,4 +1,20 @@
-<?php session_start();?>
+<?php 
+
+session_start();
+$tmp = $_SESSION['userId'];
+$db=new SQLite3('r209-db-01.sqlite');
+$querry1="SELECT * FROM users WHERE userId = '$tmp'";
+$res1=$db->query($querry1);
+$data1=$res1->fetchArray();
+
+if ($data1[3] != 1) {
+    echo "";
+    exit();
+}
+
+
+
+?>
 <!doctype admin>
 
 <head>

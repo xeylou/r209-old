@@ -19,6 +19,7 @@ if (isset($_POST['inputUsername']) && isset($_POST['inputPassword'])) {
             $_SESSION['userId'] = $tempData['userId'];
         }
         header("Location: cart.php");
+        exit();
     }
     else {
         header("Location: error.php");
