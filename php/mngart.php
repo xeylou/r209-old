@@ -64,7 +64,7 @@
         $results0 = $db->query($req0);
 
         while ($data0=$results0->fetchArray()) {
-            echo '<div class="admp"><p><a href="mngart1.php?id='.$data0[0].'">Edit mangas '.$data0[2].'</a></p></div>';
+            echo '<div class="admp"><p><a href="mngart1.php?id='.$data0[0].'">Edit mangas '.$data0[2].' - '.$data0[4].'</a></p></div>';
         }
         echo '<div class="admp"><a href="addart.php">Add a manga</a></div>';
         ?>

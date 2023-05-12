@@ -104,7 +104,7 @@
                                     <dt>Category</dt>
                                     <dd><a href="<?php echo 'category.php?id='.$data1['categoryId'].'';?>"><?php echo $data2[0];?></a>
                                     </dd>
-                                    <dt>Vues</dt>
+                                    <dt>Views</dt>
                                     <dd><?php echo $data1['viewsNumber'];?></dd>
                                     <br>
                                     <dt>Quantity left</dt>
