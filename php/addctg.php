@@ -58,39 +58,18 @@
             </div>
         </nav>
 
-        <div class="admp">
-        <p>
-        <a href="mngart.php" title="Add articles.">
-                Manage articles.
-                </a>
-                <dd>a</dd>
-                <dt>b</dt>
-                <strong>c</strong>
-            </p>
-        <p> 
-        <a href="mngctg.php" title="Add articles.">
-                Manage categories.
-                </a>
-            </p>
-        <p>
-        <a href="mngod.php" title="Add articles.">
-                Manage orders.
-                </a>
-            </p>
-        </div>
+        <?php
+        $db=new SQLite3('r209-db-01.sqlite');
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
+        echo '<div class="admp"><p>Category Id:</p>
+        <input type="text" placeholder="categoryId">
+        <p>Category Name    :</p>
+        <input type="text" placeholder="categoryName">
+        <br>
+        <br>
+        <button type="submit">Add</button></div>';
+        ?>
 
 
 

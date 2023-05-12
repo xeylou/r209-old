@@ -58,36 +58,23 @@
             </div>
         </nav>
 
-        <div class="admp">
-        <p>
-        <a href="mngart.php" title="Add articles.">
-                Manage articles.
-                </a>
-            </p>
-        <p> 
-        <a href="mngctg.php" title="Add articles.">
-                Manage categories.
-                </a>
-            </p>
-        <p>
-        <a href="mngord.php" title="Add articles.">
-                Manage orders.
-                </a>
-            </p>
-        </div>
+        <?php
+        $db=new SQLite3('r209-db-01.sqlite');
 
 
+        $id=$_GET['id'];
+        
+        $quer0='SELECT * FROM categories WHERE categoryId='.$id.'';
+        $res0=$db->query($quer0);
+        $data0=$res0->fetchArray();
 
-
-
-
-
-
-
-
-
-
-
+        echo '<div class="admp"><p>Category Id (categoryId):</p>
+        <input type="text" placeholder="'.$data0[0].'">
+        <button type="submit">Change</button>
+        <p>Category Name (categoryName):</p>
+        <input type="text" placeholder="'.$data0[1].'">
+        <button type="submit">Change</button></div>';
+        ?>
 
 
 
