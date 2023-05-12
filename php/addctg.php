@@ -59,6 +59,7 @@
         </nav>
 
         <?php
+        session_start();
         $db=new SQLite3('r209-db-01.sqlite');
         
 

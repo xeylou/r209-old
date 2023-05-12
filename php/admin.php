@@ -10,9 +10,13 @@
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/766013915536556056/1103986776583970937/manilla_mikey.jpg">
     <link defer rel="stylesheet" href="https://cdn.discordapp.com/attachments/766013915536556056/1103987220710445076/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdn.discordapp.com/attachments/766013915536556056/1104383479724130314/style2.css"/>
+    
 </head>
 
 <body class="layout-boxed">
+<?php
+    if ( empty(session_id()) ) session_start();;
+    ?>
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -57,8 +61,8 @@
                 </div>
             </div>
         </nav>
-
-        <div class="admp">
+        <?php
+        echo '<div class="admp">
         <p>
         <a href="mngart.php" title="Add articles.">
                 Manage articles.
@@ -82,7 +86,9 @@
                 </a>
             </p>
         <p>
-        </div>
+        </div>';
+        ?>
+        
 
 
 
