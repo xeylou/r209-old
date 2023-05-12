@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype admin>
 
 <head>
@@ -10,6 +11,7 @@
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/766013915536556056/1103986776583970937/manilla_mikey.jpg">
     <link defer rel="stylesheet" href="https://cdn.discordapp.com/attachments/766013915536556056/1103987220710445076/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdn.discordapp.com/attachments/766013915536556056/1104383479724130314/style2.css"/>
+    
 </head>
 
 <body class="layout-boxed">
@@ -57,24 +59,9 @@
                 </div>
             </div>
         </nav>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <?php
+        echo '<div style="margin-left: 80px"><h2>Error</h2><p>Please contact an administrator</p></div>';
+        ?>
 
         <div class=" container ">
 

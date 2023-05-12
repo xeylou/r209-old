@@ -69,7 +69,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="" title="Cart">
+                            <a href="cart.php" title="Cart">
                                 Cart
                             </a>
                         </li>

@@ -1,5 +1,4 @@
 <?php session_start();?>
-
 <!doctype admin>
 
 <head>
@@ -16,9 +15,6 @@
 </head>
 
 <body class="layout-boxed">
-<?php
-    if ( empty(session_id()) ) session_start();;
-    ?>
     <div class="wrapper">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">

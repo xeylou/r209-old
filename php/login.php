@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype login>
 
 <head>
@@ -69,29 +70,25 @@
                                     <div class="fcf-body">
                                         <div id="fcf-form">
                                             <h3>Sign in</h3>
-                                            <form id="fcf-form-id" class="fcf-form-class" method="post"
-                                                action="contact-form-process.php">
-                                                <div class="fcf-form-group">
-                                                    <label for="Name" class="fcf-label">Username:</label>
-                                                    <div class="fcf-input-group">
-                                                        <input type="text" id="Name" name="Name" class="fcf-form-control"
-                                                            required="">
+                                            <form method="POST" action="logging.php">
+                                                <div>
+                                                    <label>Username:</label>
+                                                    <div>
+                                                        <input type="text" name="inputUsername">
                                                     </div>
                                                 </div>
-                                                <div class="fcf-form-group">
-                                                    <label for="Password" class="fcf-label">Password:</label>
-                                                    <div class="fcf-input-group">
-                                                        <input type="password" id="Password" name="Password" class="fcf-form-control"
-                                                            required="">
+
+                                                <div>
+                                                    <label>Password:</label>
+                                                    <div>
+                                                        <input type="password" name="inputPassword">
                                                     </div>  
                                                 </div>
                                                 <p>
 
                                                 </p>
-                                                <div class="fcf-form-group">
-                                                    <button type="submit" id="fcf-button"
-                                                        class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Login
-                                                        </button>
+                                                <div>
+                                                    <button type="submit" value="login">Login</button>
                                                 </div>
                                             </form>
                                         </div>

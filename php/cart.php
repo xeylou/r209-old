@@ -1,6 +1,8 @@
 <?php session_start();
 
-if (!isset())
+if (!isset($_SESSION['userId'])) {
+    header("Location: login.php");
+}
 
 ?>
 <!doctype admin>

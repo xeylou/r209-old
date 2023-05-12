@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="login.php" title="Cart">
+                            <a href="cart.php" title="Cart">
                                 Cart
                             </a>
                         </li>
