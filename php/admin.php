@@ -65,7 +65,7 @@
                 <!-- </a>
                 <dd>a</dd>
                 <dt>b</dt>
-                <strong>c</strong> -->
+                <strong>c</strong> --> 
             </p>
         <p> 
         <a href="mngctg.php" title="Add articles.">
