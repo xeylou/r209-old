@@ -60,7 +60,10 @@
             </div>
         </nav>
         <?php
-        echo '<div style="margin-left: 80px"><h2>Error</h2><p>Please contact an administrator</p></div>';
+        $errorMessage = $_GET['errorMessage'];
+        if ($errorMessage='wrongLogin') {
+            echo '<div style="margin-left: 80px"><h2>Error</h2><p>Wrong username or password</p><p>Please contact an administrator</p></div>';
+        }
         ?>
 
         <div class=" container ">

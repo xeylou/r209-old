@@ -8,9 +8,9 @@
 
 [overall site aspect](https://excalidraw.com/#room=3e9aa9f1fda2eba01b57,Oje23h2vRnRlo1vp3FFNDg)
 
-[website preview](http://prjwww.univ-pau.fr/~adehu)
+<!-- [website preview](http://prjwww.univ-pau.fr/~adehu)
 
-`ssh adehu@prjwww.univ-pau.fr`
+`ssh adehu@prjwww.univ-pau.fr` -->
 
 
 

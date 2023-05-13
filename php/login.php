@@ -1,4 +1,41 @@
-<?php session_start();?>
+<?php session_start();
+
+
+
+// if alreader signed in, redirect to cart
+if (isset($_SESSION['userId'])) {
+    // Redirect to the cart page
+    header("Location: cart.php");
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// if (isset($_POST['inputUsername']) && isset($_POST['inputPassword'])) {
+    
+    $db = new SQLite3('r209-db-01.sqlite');
+
+    $user = $_POST['inputUsername'];
+    $pwd = $_POST['inputPassword'];
+
+    $verifyUser = "SELECT * FROM users WHERE username = '$user' AND password = '$pwd'";
+    $res=$db->query($verifyUser);
+    
+    if ($res->fetchArray()) {
+        $tempReq="SELECT userId FROM users WHERE username = '$user'";
+        $tempRes=$db->query($tempReq);
+
+        while($tempData = $tempRes->fetchArray()) {
+            $_SESSION['userId'] = $tempData['userId'];
+        }
+        header("Location: cart.php");
+        exit();
+    }
+    else {
+        $errorMessage = '<p style="color: red">Invalid credentials, please try again.</p>';
+    }
+}
+
+?>
 <!doctype login>
 
 <head>
@@ -70,7 +107,11 @@
                                     <div class="fcf-body">
                                         <div id="fcf-form">
                                             <h3>Sign in</h3>
-                                            <form method="POST" action="logging.php">
+                                            <?php if (isset($errorMessage)) : ?>
+                                            <p><?php echo $errorMessage; ?></p>
+                                            <?php endif; ?>
+                                            <!-- <form method="POST" action="logging.php"> -->
+                                            <form method="POST">
                                                 <div>
                                                     <label>Username:</label>
                                                     <div>
@@ -90,7 +131,10 @@
                                                 <div>
                                                     <button type="submit" value="login">Login</button>
                                                 </div>
+                                                <?php
+                                            ?>
                                             </form>
+                                            
                                         </div>
                                     </div>
                                 </div>
